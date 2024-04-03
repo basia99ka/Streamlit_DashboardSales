@@ -1,6 +1,6 @@
 # Streamlit_DashboardSales
-Sales Dashboard built-in Python and the Streamlit library to visualize Excel data.
 ---
+Sales Dashboard built-in Python and the Streamlit library to visualize Excel data.
 ## Demo
 ---
 - Sales Dashboard Web App:
