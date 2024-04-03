@@ -1,4 +1,5 @@
 import pandas as pd
+import time
 import plotly.express as px
 import streamlit as st
 import matplotlib.colors as mcolors
