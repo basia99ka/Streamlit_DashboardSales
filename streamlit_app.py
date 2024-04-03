@@ -518,18 +518,26 @@ st.plotly_chart(heatmap, use_container_width=True)
 #PREDICTION FOR NEXT YEAR
 linechart2 = linechart[['Year_Month','Revenue']]
 linechart2.columns = ['ds','y']
+
+progress_text = "Forecast in progress. Please wait..."
+my_bar = st.progress(0, text=progress_text)
+
+for percent_complete in range(100):
+    time.sleep(0.05)
+    my_bar.progress(percent_complete + 1, text=progress_text)
 model= NeuralProphet()
 model.fit(linechart2)
 future = model.make_future_dataframe(linechart2, periods=12)
 forecast = model.predict(future)
 forecast["ds"] = pd.to_datetime(forecast["ds"])
-forecast["ds"]= forecast["ds"].dt.strftime('%Y %b')
+forecast["ds"] = forecast["ds"].dt.strftime('%Y %b')
 actual_prediction= model.predict(linechart2)
 actual_prediction["ds"] = pd.to_datetime(actual_prediction["ds"])
 actual_prediction["ds"]= actual_prediction["ds"].dt.strftime('%Y %b')
 min_date = min(linechart2['ds'])
 max_date = max(forecast['ds'])
 linechart2.columns=['Date','Actual']
+st.success('Forecast ready')
 lineChart2 = px.line()
 lineChart2.add_scatter( x=linechart2['Date'], y=linechart2['Actual'],mode='lines', name='Actual',line_color='#4328E6')
 lineChart2.add_scatter(x=forecast['ds'], y=forecast['yhat1'], mode='lines', name='Forecast', line_color='#FD003D')
@@ -558,6 +566,7 @@ lineChart2.update_layout(
     hovermode='closest')
 lineChart.update_traces(line=dict(width=3))
 st.plotly_chart(lineChart2, use_container_width=True)
+my_bar.empty()
 
 # Download Dataset
 with st.expander("View Data - Whole Data Sales"):
