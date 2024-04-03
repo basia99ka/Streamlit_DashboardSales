@@ -517,6 +517,8 @@ heatmap.update_layout(plot_bgcolor='#121820',
 st.plotly_chart(heatmap, use_container_width=True)
 
 #PREDICTION FOR NEXT YEAR
+st.subheader("Forecast for 2020")
+
 linechart2 = linechart[['Year_Month','Revenue']]
 linechart2.columns = ['ds','y']
 
