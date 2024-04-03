@@ -1,0 +1,7 @@
+matplotlib==3.7.1
+neuralprophet==0.8.0
+openpyxl==3.1.2
+pandas==2.2.1
+plotly==5.20.0
+streamlit==1.32.2
+
