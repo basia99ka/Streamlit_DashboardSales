@@ -10,7 +10,8 @@ st.set_page_config(
     page_title="Sales Dashboard",
     page_icon=":bar_chart:",
     layout="wide",)
-st.markdown('<link rel="stylesheet" href="app_style/streamlit.css">', unsafe_allow_html=True)
+with open ("app_style/streamlit.css") as f:
+    st.markdown(f'<style> {f.read()} </style>', unsafe_allow_html=True)
 # READ EXCEL
 @st.cache_data
 def read_data():
