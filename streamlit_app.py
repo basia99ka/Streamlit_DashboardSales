@@ -15,7 +15,7 @@ with open ("app_style/streamlit.css") as f:
 # READ EXCEL
 @st.cache_data
 def read_data():
-    df = pd.read_excel('Data.xlsx')
+    df = pd.read_excel('dataset/Data.xlsx')
     df["Year"] = pd.to_datetime(df['Date'], format='%d.%m.%Y').dt.year
     df["Year_Month"] = pd.to_datetime(df['Date'], format='%d.%m.%Y').dt.to_period('M')
     df["CustomerSatisfaction"] = df["CustomerSatisfaction"].replace({
