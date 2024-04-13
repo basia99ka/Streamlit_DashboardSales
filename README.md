@@ -1,5 +1,8 @@
 # Streamlit_DashboardSales
-Sales Dashboard built-in Python and the Streamlit library to visualize Excel data.
+## About project
+The Sales Dashboard project aims to provide a visualization for sales data stored in Excel and forecast for future sales.
+Dataset source: https://excelfind.com 
+Python Libraries used: Numpy, Pandas, Plotly, Neuralprophet , Streamlit.
 ## Demo
 - Sales Dashboard Web App:
 https://appdashboardsales-ba5qnab6d4vev3t52mdrta.streamlit.app/
