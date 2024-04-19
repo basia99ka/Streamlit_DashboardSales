@@ -97,13 +97,11 @@ lineChart.update_layout(
     plot_bgcolor='#121820',
     paper_bgcolor='#121820',
     xaxis=dict(
-        title=dict(text='Month Year', font=dict(color='white')),
         tickmode='linear',
        # tickvals=linechart.index[::3],
        # ticktext=linechart['Year_Month'][::3],
         tickangle=45,
         tickfont=dict(color='white'),
-        title_font={"size": 16},
         title_standoff=25),
     yaxis=dict(
         title=dict(text='$Revenue', font=dict(color='white')),
@@ -160,8 +158,6 @@ with col1:
         legend=dict(
             font=dict(color="white")),
         xaxis=dict(
-            title=dict(text="Product", font=dict(color='white')),
-            title_font={"size": 16},
             tickfont=dict(color='white')),
         yaxis=dict(
             title=dict(text='$Revenue', font=dict(color='white')),
@@ -279,8 +275,6 @@ with exp3:
             legend=dict(
                 font=dict(color="white")),
             xaxis=dict(
-                title=dict(text="Product", font=dict(color='white')),
-                title_font={"size": 16},
                 tickfont=dict(color='white')),
             yaxis=dict(
                 title=dict(text='Returns', font=dict(color='white')),
@@ -308,8 +302,6 @@ with exp4:
         legend=dict(
             font=dict(color="white")),
         xaxis=dict(
-            title=dict(text="Product", font=dict(color='white')),
-            title_font={"size": 16},
             tickfont=dict(color='white')),
         yaxis=dict(
             title=dict(text='Returns', font=dict(color='white')),
@@ -356,7 +348,6 @@ heatmap.update_layout(plot_bgcolor='#121820',
                          font=dict(color="white", size=22),
                          x=0.05, y=0.95),
                       xaxis= dict(
-                         title=dict(text="State", font=dict(color='white')),
                          tickfont=dict(color='white')),
                       yaxis=dict(
                          title=dict(text="Customer Acquisition Type", font=dict(color='white')),
@@ -397,11 +388,9 @@ lineChart2.update_layout(
     plot_bgcolor='#121820',
     paper_bgcolor='#121820',
     xaxis=dict(
-        title=dict(text='Month Year', font=dict(color='white')),
         tickmode='auto',
         tickangle=45,
         tickfont=dict(color='white'),
-        title_font={"size": 16},
         title_standoff=25,
         range=[min_date, max_date]),
     yaxis=dict(
